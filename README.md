@@ -8,6 +8,8 @@ Download and install the Android APK:
 
 [Download Shoply APK](https://expo.dev/accounts/sarcastic_here/projects/dual-role-commerce/builds/5d1e5d03-1aa8-488b-9599-56dcf3f1fce3)
 
+youtube link - (https://youtube.com/shorts/kbEzp7Qc9CY?si=-R8g2rnjILB_9_yZ)
+
 > Android APK built using Expo Application Services (EAS).
 
 ## Features
