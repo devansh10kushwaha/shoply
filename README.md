@@ -119,5 +119,29 @@ shoply/
 │
 ├── app.json
 ├── eas.json
+
+## Application Architecture
+
+                         SHOPLY
+                           │
+             ┌─────────────┴─────────────┐
+             │                           │
+        CUSTOMER                     SUPPLIER
+             │                           │
+     ┌───────┼────────┐          ┌───────┼────────┐
+     │       │        │          │       │        │
+ Products   Cart    Orders   Inventory Analytics Chat
+     │       │        │          │       │        │
+     └───────┴────────┘          └───────┴────────┘
+             │                           │
+             └─────────────┬─────────────┘
+                           │
+                       Socket.IO
+                           │
+                           ▼
+                    Node.js Server
+                           │
+                           ▼
+                     messages.json
 ├── package.json
 └── README.md
