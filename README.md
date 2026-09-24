@@ -1,56 +1,123 @@
-# Welcome to your Expo app 👋
+# Shoply — Dual-Role Mobile Commerce Platform
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Shoply is a dual-role mobile commerce application developed using React Native and Expo. It provides separate experiences for customers and suppliers, with features including product browsing, cart management, order management, supplier inventory, analytics, and real-time customer support chat.
 
-## Get started
+## APK
 
-1. Install dependencies
+Download and install the Android APK:
 
-   ```bash
-   npm install
-   ```
+[Download Shoply APK](https://expo.dev/accounts/sarcastic_here/projects/dual-role-commerce/builds/5d1e5d03-1aa8-488b-9599-56dcf3f1fce3)
 
-2. Start the app
+> Android APK built using Expo Application Services (EAS).
 
-   ```bash
-   npx expo start
-   ```
+## Features
 
-In the output, you'll find options to open the app in a
+### Customer Module
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- Customer authentication
+- Product browsing
+- Product details
+- Add products to cart
+- Increase/decrease product quantity
+- Swipe-to-delete cart items
+- Cart total calculation
+- Order management
+- Customer profile
+- Real-time customer support chat
+- Android keyboard and safe-area support
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Supplier Module
 
-## Get a fresh project
+- Supplier dashboard
+- Inventory management
+- Product management
+- Sales and inventory analytics
+- Supplier-side chat
+- Separate supplier workflow
 
-When you're ready, run:
+### Real-Time Chat
 
-```bash
-npm run reset-project
-```
+Shoply uses Socket.IO for real-time customer-support communication.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- Real-time messaging
+- Customer-support chat room
+- Message history
+- Customer and supplier communication
+- WebSocket-based communication
+- Node.js Socket.IO server
 
-### Other setup steps
+## Technology Stack
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+### Frontend
 
-## Learn more
+- React Native
+- Expo
+- TypeScript
+- Expo Router
+- React Native Gesture Handler
+- Ionicons
 
-To learn more about developing your project with Expo, look at the following resources:
+### Backend
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- Node.js
+- Socket.IO
+- HTTP Server
+- JSON-based message persistence
 
-## Join the community
+### Tools
 
-Join our community of developers creating universal apps.
+- npm
+- Git
+- GitHub
+- Expo EAS
+- Android APK
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Project Structure
+
+```text
+shoply/
+│
+├── assets/
+│
+├── server/
+│   ├── data/
+│   │   └── messages.json
+│   ├── index.js
+│   ├── package.json
+│   └── package-lock.json
+│
+├── src/
+│   ├── app/
+│   │   ├── auth/
+│   │   ├── customer/
+│   │   │   ├── product/
+│   │   │   ├── cart.tsx
+│   │   │   ├── chat.tsx
+│   │   │   ├── index.tsx
+│   │   │   ├── orders.tsx
+│   │   │   └── profile.tsx
+│   │   │
+│   │   ├── supplier/
+│   │   │   ├── analytics.tsx
+│   │   │   ├── chat.tsx
+│   │   │   ├── index.tsx
+│   │   │   └── inventory.tsx
+│   │   │
+│   │   ├── _layout.tsx
+│   │   └── index.tsx
+│   │
+│   ├── data/
+│   ├── services/
+│   │   └── socket.ts
+│   ├── store/
+│   │   ├── cartStore.tsx
+│   │   ├── chatStore.tsx
+│   │   ├── productStore.tsx
+│   │   └── sessionStore.tsx
+│   │
+│   └── types/
+│
+├── app.json
+├── eas.json
+├── package.json
+└── README.md
